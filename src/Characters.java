@@ -76,24 +76,15 @@ public class Characters {
         this.power = power;
     }
 
-    public void attack(Characters target){
-        target.health -= power;
-        System.out.println(name + "нанес урон" + target.name + " " + power + ". " +
-                "\nУ " + target.name + " осталось здоровья " + target.health);
-    }
-
-    public void cure(Characters target) {
-        if (potion > 1) {
-            target.health += 50;
-            System.out.println("У " + name + "пополнилось здоровье до " + target.health);
-        }
-    }
-
     public void parametersOfCharacter(){
         System.out.println("<Здоровье:" + getHealth() + "> " +
                 "<Ловкость:" + getDexterity() + "> " +
                 "<Опыт:" + getExperience() + "> " +
                 "<Сила:" + getPower() + "> " +
                 "<Золото:" + getGold() + ">");
+    }
+
+    public void attack(Characters target){
+        int damage =target.dexterity* target.power*(int)(Math.random()*3);
     }
 }
