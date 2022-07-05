@@ -17,6 +17,7 @@ public class Fight {
                         System.out.println(hero.getName() + " победил злодейку " + witch.getName() + "!");
                         hero.setGold(hero.getGold() + 500);
                         hero.setExperience(hero.getExperience() + random.nextInt(12)*20 +100);
+                        hero.levelUp();
                         hero.parametersOfCharacter();
                         break;
                     }
@@ -36,6 +37,7 @@ public class Fight {
                         hero.setGold(hero.getGold() + 50);
                         hero.setHealth(100);
                         hero.setExperience(hero.getExperience() + random.nextInt(2)*20);
+                        hero.levelUp();
                         hero.parametersOfCharacter();
                         break;
                 }
@@ -59,6 +61,7 @@ public class Fight {
                     hero.setGold(hero.getGold() + 50);
                     hero.setHealth(100);
                     hero.setExperience(hero.getExperience() + random.nextInt(2)*20);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }
@@ -76,6 +79,7 @@ public class Fight {
                     System.out.println(hero.getName() + " победил злодейку " + witch.getName() + "!");
                     hero.setGold(hero.getGold() + 500);
                     hero.setExperience(hero.getExperience() + random.nextInt(12)*20 +100);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }
@@ -103,6 +107,7 @@ public class Fight {
                     System.out.println(hero.getName() + " победил " + dragon.getName() + "!");
                     hero.setGold(hero.getGold() + 300);
                     hero.setExperience(hero.getExperience() + random.nextInt(12)*20 +100);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }
@@ -122,6 +127,7 @@ public class Fight {
                     hero.setGold(hero.getGold() + 30);
                     hero.setHealth(100);
                     hero.setExperience(hero.getExperience() + random.nextInt(2)*20);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }
@@ -145,6 +151,7 @@ public class Fight {
                     hero.setGold(hero.getGold() + 30);
                     hero.setHealth(100);
                     hero.setExperience(hero.getExperience() + random.nextInt(2)*20);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }
@@ -162,6 +169,7 @@ public class Fight {
                     System.out.println(hero.getName() + " победил " + dragon.getName() + "!");
                     hero.setGold(hero.getGold() + 300);
                     hero.setExperience(hero.getExperience() + random.nextInt(12)*20 +100);
+                    hero.levelUp();
                     hero.parametersOfCharacter();
                     break;
                 }

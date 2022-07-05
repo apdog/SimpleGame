@@ -4,7 +4,7 @@ public class Game {
 
     public static void main(String[] args) {
         // Создание игровых персонажей и битвы
-        Hero hero = new Hero("", 100, 6, 500, 0, 20);
+        Hero hero = new Hero("", 400, 3,500, 0, 20, 1);
         Witch witch = new Witch("Карга Салия", 600, 4, 32);
         Dealer dealer = new Dealer("Берлиоз",3000);
         Dragon dragon = new Dragon("Дракон Каракас", 110,2, 8);
@@ -31,17 +31,17 @@ public class Game {
                 "\nПеред тобой стоит выбор пойти: \n1. В темнолесье \n2. На болото, \n3. К торговцу \n4. Завершить игру" +
                 "\nВыбери, куда идти.");
         while (true){
-            int choice = inputActionPlayer.nextInt();
+            String choice = inputActionPlayer.nextLine();
             switch (choice) {
-                case 1 -> {
+                case "1" -> {
                     while (true) {
                         hero.parametersOfCharacter();
                         System.out.println("""
                                 Вы идете в темнолесье и попадаете в логово злой колдуньи. Будете нападать на колдунью или вернетесь обратно?
                                 1. Сразиться\s
                                 2. Вернуться в поселение""");
-                        int choiceAttack = inputActionPlayer.nextInt();
-                        if (choiceAttack == 1) {
+                        String choiceAttack = inputActionPlayer.nextLine();
+                        if (choiceAttack.equals("1")) {
                             fight.fightingWitWitch(witch, hero, dragon);
                             System.out.println("""
                                     Куда пойдем дальше?
@@ -50,7 +50,7 @@ public class Game {
                                     3. К торговцу\s
                                     4. Закончить игру""");
                             break;
-                        } else if (choiceAttack == 2) {
+                        } else if (choiceAttack.equals("2")) {
                             System.out.println("""
                                     Куда пойдем дальше?
                                     1. В темнолесье\s
@@ -68,7 +68,7 @@ public class Game {
                         }
                     }
                 }
-                case 2 ->{
+                case "2" ->{
                     hero.parametersOfCharacter();
                     System.out.println("""
                             Вы попадаете в черное и мрачное болото, в котором поселился страшный дракон \s
@@ -83,9 +83,9 @@ public class Game {
                                     4. Закончить игру""");
 
                 }
-                case 3 -> {
+                case "3" -> {
                     hero.parametersOfCharacter();
-                    System.out.println("Ты зашел в деревянную лачугу, где торговец крыхтел перед прилавком, я вно скучающий от безделья. Но, как только" +
+                    System.out.println("Ты зашел в деревянную лачугу, где торговец крыхтел перед прилавком, явно скучающий от безделья. Но, как только" +
                             "он увидел тебя, то сразу повеселел и принялся тебя обхаживать.");
                     dealer.buyPotion(hero);
                     System.out.println("""
@@ -95,9 +95,11 @@ public class Game {
                                     3. К торговцу\s
                                     4. Закончить игру""");
                 }
-            } if (choice == 4){
-                System.out.println("До новых встреч " + hero.getName() + "!");
+            } if (choice.equals("4")){
+                System.out.println("До новых встреч, " + hero.getName() + "!");
                 break;
+            } else  {
+                System.out.println("Неверна введена команда. Введите цифру из предложенных вариантов");
             }
         }
 
