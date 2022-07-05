@@ -77,14 +77,12 @@ public class Characters {
     }
 
     public void parametersOfCharacter(){
-        System.out.println("<Здоровье:" + getHealth() + "> " +
+        System.out.println("____________________________________________________________");
+        System.out.println(getName() + " <Здоровье:" + getHealth() + "> " +
                 "<Ловкость:" + getDexterity() + "> " +
                 "<Опыт:" + getExperience() + "> " +
                 "<Сила:" + getPower() + "> " +
                 "<Золото:" + getGold() + ">");
-    }
-
-    public void attack(Characters target){
-        int damage =target.dexterity* target.power*(int)(Math.random()*3);
+        System.out.println("____________________________________________________________");
     }
 }

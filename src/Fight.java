@@ -15,8 +15,11 @@ public class Fight {
                         + witch.getHealth());
                     if (witch.getHealth()<= 0) {
                         System.out.println(hero.getName() + " победил злодейку " + witch.getName() + "!");
+                        hero.setGold(hero.getGold() + 500);
+                        hero.parametersOfCharacter();
                         break;
                     }
+                hero.setExperience(hero.getExperience()*random.nextInt(12));
                 ++i;
                 try {
                     Thread.sleep(1000);
@@ -30,6 +33,9 @@ public class Fight {
                     if (hero.getHealth()<= 0) {
                         System.out.println(witch.getName() + " победила героя " + hero.getName() + "! \n" +
                                 "Но вы смогли каким-то чудом выжить. И вот по прошествию нескольких дней вы снова на распутье");
+                        hero.setGold(hero.getGold() + 50);
+                        hero.setHealth(100);
+                        hero.parametersOfCharacter();
                         break;
                 }
                 ++i;
@@ -49,6 +55,9 @@ public class Fight {
                 if (hero.getHealth()<= 0) {
                     System.out.println(witch.getName() + " победила героя " + hero.getName() + "! \n" +
                             "Но вы смогли каким-то чудом выжить. И вот по прошествию нескольких дней вы снова на распутье");
+                    hero.setGold(hero.getGold() + 50);
+                    hero.setHealth(100);
+                    hero.parametersOfCharacter();
                     break;
                 }
                 ++i;
@@ -63,8 +72,11 @@ public class Fight {
                         + witch.getHealth());
                 if (witch.getHealth()<= 0) {
                     System.out.println(hero.getName() + " победил злодейку " + witch.getName() + "!");
+                    hero.setGold(hero.getGold() + 500);
+                    hero.parametersOfCharacter();
                     break;
                 }
+                hero.setExperience(hero.getExperience()*random.nextInt(12));
                 ++i;
                 try {
                     Thread.sleep(1000);
@@ -87,8 +99,11 @@ public class Fight {
                         + witch.getHealth());
                 if (dragon.getHealth()<= 0) {
                     System.out.println(hero.getName() + " победил " + dragon.getName() + "!");
+                    hero.setGold(hero.getGold() + 300);
+                    hero.parametersOfCharacter();
                     break;
                 }
+                hero.setExperience(hero.getExperience()*random.nextInt(12));
                 ++i;
                 try {
                     Thread.sleep(1000);
@@ -102,6 +117,9 @@ public class Fight {
                 if (hero.getHealth()<= 0) {
                     System.out.println(dragon.getName() + " победил героя " + hero.getName() + "! \n" +
                             "Но вы смогли каким-то чудом выжить. И вот по прошествию нескольких дней вы снова на распутье");
+                    hero.setGold(hero.getGold() + 30);
+                    hero.setHealth(100);
+                    hero.parametersOfCharacter();
                     break;
                 }
                 ++i;
@@ -121,6 +139,9 @@ public class Fight {
                 if (hero.getHealth()<= 0) {
                     System.out.println(dragon.getName() + " победил героя " + hero.getName() + "! \n" +
                             "Но вы смогли каким-то чудом выжить. И вот по прошествию нескольких дней вы снова на распутье");
+                    hero.setGold(hero.getGold() + 30);
+                    hero.setHealth(100);
+                    hero.parametersOfCharacter();
                     break;
                 }
                 ++i;
@@ -135,8 +156,11 @@ public class Fight {
                         + dragon.getHealth());
                 if (dragon.getHealth()<= 0) {
                     System.out.println(hero.getName() + " победил " + dragon.getName() + "!");
+                    hero.setGold(hero.getGold() + 300);
+                    hero.parametersOfCharacter();
                     break;
                 }
+                hero.setExperience(hero.getExperience()*random.nextInt(12));
                 ++i;
                 try {
                     Thread.sleep(1000);
