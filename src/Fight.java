@@ -5,11 +5,10 @@ public class Fight {
 
     public void fighting(Witch witch, Hero hero) {
         Random randomInt = new Random();
-        String[] characters = {"witch","dragon"};
         int turn = randomInt.nextInt(2);
         if (turn == 0) {
             System.out.println("Битву начинает " + hero.getName());
-            while (true) {
+             while (true) {
                 System.out.println("**** Ход " + i + " - " + hero.getName() + " ****");
                 witch.setHealth(witch.getHealth()- hero.getPower() * hero.getDexterity() * randomInt.nextInt(4));
                 System.out.println(hero.getName() + " наносит удар по " + witch.getName() + " и уменьшает её здоровье до "
@@ -19,7 +18,12 @@ public class Fight {
                         break;
                     }
                 ++i;
-                System.out.println("**** Ход " + i + " - " + witch.getName() + " ****");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                 System.out.println("**** Ход " + i + " - " + witch.getName() + " ****");
                 hero.setHealth(hero.getHealth() - witch.getPower()* witch.getDexterity() * randomInt.nextInt(4));
                 System.out.println(witch.getName() + " наносит удар по " + hero.getName() + " и уменьшает его здоровье до "
                         + hero.getHealth());
@@ -28,6 +32,11 @@ public class Fight {
                         break;
                 }
                 ++i;
+                try {
+                     Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                     throw new RuntimeException(e);
+                }
             }
         } else {
             System.out.println("Битву начинает " + witch.getName());
@@ -41,6 +50,11 @@ public class Fight {
                     break;
                 }
                 ++i;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 System.out.println("**** Ход " + i + " - " + hero.getName() + " ****");
                 witch.setHealth(witch.getHealth()- hero.getPower()* hero.getDexterity() * randomInt.nextInt(4));
                 System.out.println(hero.getName() + " наносит удар по " + witch.getName() + " и уменьшает её здоровье до "
@@ -50,6 +64,11 @@ public class Fight {
                     break;
                 }
                 ++i;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
     }
