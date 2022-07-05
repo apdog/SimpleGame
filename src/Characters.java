@@ -5,7 +5,6 @@ public class Characters {
     private int gold;
     private int experience;
     private int power;
-    public int potion = 0;
 
     public String getName() {
         return name;
@@ -27,10 +26,6 @@ public class Characters {
         return dexterity;
     }
 
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
-    }
-
     public int getGold() {
         return gold;
     }
@@ -49,10 +44,6 @@ public class Characters {
 
     public int getPower() {
         return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
     }
 
     public Characters(String name, int gold) {

@@ -5,9 +5,9 @@ public class Game {
     public static void main(String[] args) {
         // Создание игровых персонажей и битвы
         Hero hero = new Hero("", 100, 6, 500, 0, 20);
-        Witch witch = new Witch("Карга Салия", 600, 4, 50);
+        Witch witch = new Witch("Карга Салия", 600, 4, 32);
         Dealer dealer = new Dealer("Берлиоз",3000);
-        Dragon dragon = new Dragon("Дракон Каракас", 80,2, 8);
+        Dragon dragon = new Dragon("Дракон Каракас", 110,2, 8);
         Fight fight = new Fight();
 
         // Ввод имени игрока
@@ -95,7 +95,6 @@ public class Game {
                                     3. К торговцу\s
                                     4. Закончить игру""");
                 }
-                default -> System.out.println("Выберите правильную комманду");
             } if (choice == 4){
                 System.out.println("До новых встреч " + hero.getName() + "!");
                 break;
